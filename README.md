@@ -4,6 +4,14 @@
 
 Docker container for running OpenSSH server. Can be used in combination with [sshuttle](https://github.com/sshuttle/sshuttle) for creating a secure network connection to a docker cluster
 
+## Buildig
+generate ssh key
+create authorized_keys file with public key inside
+
+docker build -t ssh-server:jdk8 .
+
+docker run -d --name ssh-server -p 22 ssh-server:jdk8
+
 ## Running
 
 It simply needs to be run with port 22 open
